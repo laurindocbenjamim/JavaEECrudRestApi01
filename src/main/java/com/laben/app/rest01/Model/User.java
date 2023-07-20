@@ -3,23 +3,39 @@ package com.laben.app.rest01.Model;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "templates/user")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private long id;
 
-    @Column
+    @Column(name = "firstname", length = 100, nullable = false)
     private String firstname;
 
-    @Column
+    @Column(name = "lastname", length = 50, nullable = false)
     private String lastname;
 
-    @Column
+    @Column(name = "age", length = 4)
     private int age;
 
-    @Column
+    @Column(name = "occupation", length = 255)
     private String occupation;
+
+    @Column(name = "password", length = 255, nullable = false)
+    private String password;
+
+    public User(){}
+
+    public User(long id, String firstname, String lastname,
+                int age, String occupation){
+        this.id = id;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.age = age;
+        this.occupation = occupation;
+    }
 
     public long getId() {
         return id;
@@ -60,4 +76,13 @@ public class User {
     public void setOccupation(String occupation) {
         this.occupation = occupation;
     }
+
+    public String getPassword(){
+        return this.password;
+    }
+
+    public void setPassword(String password){
+        this.password = password;
+    }
+
 }

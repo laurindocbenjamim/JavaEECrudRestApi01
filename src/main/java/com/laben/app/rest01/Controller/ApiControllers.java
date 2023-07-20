@@ -15,7 +15,7 @@ public class ApiControllers {
     private UserRepo userRepo;
 
     @GetMapping(value = "/")
-    public String getPage(){
+    public String index(){
 
         return "Welcome to my Api!";
     }
