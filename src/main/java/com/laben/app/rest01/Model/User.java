@@ -3,7 +3,7 @@ package com.laben.app.rest01.Model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "templates/user")
+@Table(name = "user")
 public class User {
 
     @Id

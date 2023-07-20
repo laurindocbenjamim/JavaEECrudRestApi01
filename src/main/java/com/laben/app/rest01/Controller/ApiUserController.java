@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 @CrossOrigin("*") /* This annotation grants access to all requests methhods*/
-@RequestMapping("templates/user")
+@RequestMapping("/user")
 public class ApiUserController {
 
     @Autowired
