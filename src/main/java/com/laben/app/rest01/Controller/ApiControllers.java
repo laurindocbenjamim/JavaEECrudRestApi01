@@ -20,7 +20,7 @@ public class ApiControllers {
         return "Welcome to my Api!";
     }
 
-    @GetMapping(value = "/user")
+    @GetMapping(value = "/user-list")
     public List<User> getUsers(){
         return userRepo.findAll();
     }

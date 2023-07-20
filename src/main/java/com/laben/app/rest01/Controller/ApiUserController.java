@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin("*") /* This annotation grants access to all requests methhods*/
+@RequestMapping("user")
 public class ApiUserController {
 
     @Autowired
